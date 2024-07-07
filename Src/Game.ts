@@ -48,18 +48,26 @@ export class Game{
         }
 
         if(this.moveCount%2===0){
-            console.log("sent to player 2")
+            console.log("player 1 moved, player 2 turn")
             this.player2.send(JSON.stringify({
                 type: MOVE,
                 payload: move
-            }))
+            }));
+            // this.player1.send(JSON.stringify({
+            //     type: MOVE,
+            //     payload: move
+            // }));
         }
         if(this.moveCount%2===1){
-            console.log("sent to player 1")
+            console.log("player 2 moved, player 1 turn")
             this.player1.send(JSON.stringify({
                 type: MOVE,
                 payload: move
             }))
+            // this.player2.send(JSON.stringify({
+            //     type: MOVE,
+            //     payload: move
+            // }))
 
         }
         this.moveCount++;
