@@ -77,6 +77,25 @@ export class Game{
                 }
             }))
         }
+
+        if(this.board.isDraw()){
+           
+        }
+        if(this.board.isInsufficientMaterial()){
+
+        }
+        if(this.board.isCheckmate()){
+
+        }
+        if(this.board.isStalemate()){
+
+        }
+        if(this.board.isThreefoldRepetition()){
+
+        }
+
+
+
         
 
     }
